@@ -8,18 +8,19 @@
   </head>
   <body>
     <div class="container">
-      <div class="postcard-wrapper">
-        <!-- Framsida (Bild 1) -->
-        <div class="postcard-front" id="postcardFront">
-          <img src="/1.jpg" alt="Festinbjudan" />
+      <div class="postcard-scene" id="postcardScene">
+        <!-- Bakgrund/bas (bild 2) -->
+        <div class="postcard-base">
+          <img src="/2.jpg" alt="Festbild" />
+        </div>
+        
+        <!-- Övre locket som viks upp (bild 1) -->
+        <div class="postcard-cover" id="postcardCover">
+          <img src="/1.png" alt="Festinbjudan" />
           <div class="click-hint">Klicka för att öppna 👆</div>
         </div>
-
-        <!-- Insida (Bild 2) -->
-        <div class="postcard-inside" id="postcardInside">
-          <img src="/2.jpg" alt="Festbild" />
-          <button class="close-btn" id="closeBtn">✕</button>
-        </div>
+        
+        <button class="close-btn" id="closeBtn">✕</button>
       </div>
     </div>
     <script type="module" src="/main.js"></script>

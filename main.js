@@ -3,35 +3,26 @@ console.log('🎉 Festinbjudan laddad!');
 let isOpen = false;
 
 document.addEventListener('DOMContentLoaded', () => {
-  const postcardFront = document.getElementById('postcardFront');
-  const postcardInside = document.getElementById('postcardInside');
+  const postcardScene = document.getElementById('postcardScene');
+  const postcardCover = document.getElementById('postcardCover');
   const closeBtn = document.getElementById('closeBtn');
 
-  // Öppna vykortet när man klickar på framsidan
-  postcardFront.addEventListener('click', () => {
+  // Öppna kortet när man klickar på locket
+  postcardCover.addEventListener('click', () => {
     if (!isOpen) {
       isOpen = true;
-      postcardFront.style.display = 'none';
-      postcardInside.classList.add('open');
+      postcardScene.classList.add('opening');
+      postcardCover.style.cursor = 'default';
     }
   });
 
-  // Stäng vykortet
+  // Stäng kortet
   closeBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     if (isOpen) {
       isOpen = false;
-      postcardInside.classList.remove('open');
-      
-      setTimeout(() => {
-        postcardInside.style.display = 'none';
-        postcardFront.style.display = 'block';
-        postcardFront.classList.add('closing');
-        
-        setTimeout(() => {
-          postcardFront.classList.remove('closing');
-        }, 600);
-      }, 400);
+      postcardScene.classList.remove('opening');
+      postcardCover.style.cursor = 'pointer';
     }
   });
 });
