@@ -11,7 +11,10 @@
       <div class="postcard-scene" id="postcardScene">
         <!-- Bakgrund/bas (bild 2) -->
         <div class="postcard-base">
-          <img src="/2.jpg" alt="Festbild" />
+          <picture>
+            <source media="(max-width: 768px)" srcset="/2mobil.jpg">
+            <img src="/2.jpg" alt="Festbild" />
+          </picture>
         </div>
         
         <!-- Övre locket som viks upp (bild 1) -->

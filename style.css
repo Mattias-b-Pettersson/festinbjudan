@@ -45,6 +45,12 @@ body {
   background: transparent;
 }
 
+.postcard-base picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .postcard-base img {
   width: 100%;
   height: 100%;
