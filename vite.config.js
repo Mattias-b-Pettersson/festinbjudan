@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/festinbjudan/',
+  base: process.env.NODE_ENV === 'production' ? '/festinbjudan/' : '/',
   server: {
     port: 3000,
     open: true
