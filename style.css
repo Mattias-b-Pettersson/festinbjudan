@@ -205,4 +205,12 @@ body {
   .postcard-scene.opening .postcard-cover {
     transform: rotateY(-150deg);
   }
+  
+  /* Visa endast högra halvan av bild 2 på mobil */
+  .postcard-base img {
+    object-fit: cover;
+    object-position: right center;
+    transform: scale(2);
+    transform-origin: right center;
+  }
 }
