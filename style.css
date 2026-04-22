@@ -188,7 +188,7 @@ body {
 @media (max-width: 768px) {
   .postcard-scene {
     width: 95vw;
-    height: 85vh;
+    height: 70vh;
   }
 
   .click-hint {
